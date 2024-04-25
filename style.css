@@ -1,0 +1,12 @@
+body {
+    background: black;
+}
+
+canvas {
+    border: 5px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background: url("assets/grass_day.png");
+}
