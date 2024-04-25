@@ -19,12 +19,22 @@ window.addEventListener('load', () => {
     const ctx = canvas.getContext('2d');
     canvas.width = GAME.width;
     canvas.height = GAME.height;
-
+    ctx.font = '30px monospace';
+    ctx.textBaseline = 'top';
     const animate = () => {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
+        Food.draw(ctx);
         Snake.draw(ctx);
         Snake.update();
+
+        if (GAME.gameOver) {
+            ctx.textAlign = 'center';
+            ctx.fillStyle = 'black';
+            ctx.font = '60px monospace';
+            ctx.fillText('GAME OVER!', GAME.width * 0.5, GAME.height*0.5);
+            clearInterval(GAME.loop);
+        }
     }
 
-    setInterval(animate, 500);
+    GAME.loop = setInterval(animate, 500);
 })
