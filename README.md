@@ -1,2 +1,2 @@
 # DangerNoodle
-2D JavaScript snake game that I built for pleasure.
+2D JavaScript snake game that I've built for pleasure.
