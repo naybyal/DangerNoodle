@@ -9,3 +9,8 @@ canvas {
     translate: -50% -50%;
     background: url("assets/grass_day.png");
 }
+
+.assets {
+    display: none;
+    
+}
